@@ -4,11 +4,16 @@ import './style.scss';
 export default function App() {
   const [activeButton, setActiveButton] = useState(null);
 
+  const url = () => {
+    window.location.replace('https://www.globorural.globo.com');
+  };
+
   const handleButtonClick = (button) => {
     setActiveButton(button);
   };
   return (
     <div>
+      <span onClick={url}>url</span>
       <button
         disabled={activeButton === 'button1'}
         onClick={() => handleButtonClick('button1')}
